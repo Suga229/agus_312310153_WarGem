@@ -91,7 +91,6 @@ public class HomeActivity extends AppCompatActivity {
         btnTransaction = findViewById(R.id.btnTransaction);
         btnProfile = findViewById(R.id.btnProfile);
 
-        // Logout
         btnLogout.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -100,38 +99,32 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        // Klik Keranjang
         btnCart.setOnClickListener(v -> {
             Intent intent = new Intent(this, CartActivity.class);
             startActivity(intent);
         });
 
-        // Klik Chat
         btnChat.setOnClickListener(v ->
                 Toast.makeText(HomeActivity.this, "Navigasi ke Chat", Toast.LENGTH_SHORT).show()
         );
 
-        // Search
         edtSearch.setOnEditorActionListener((v, actionId, event) -> {
             String query = edtSearch.getText().toString();
             if (!query.isEmpty()) {
                 Toast.makeText(HomeActivity.this, "Mencari: " + query, Toast.LENGTH_SHORT).show();
-                // Tambahkan logika pencarian di sini
+                // logika pencarian
             }
             return false;
         });
 
-        // Klik Home
         btnHome.setOnClickListener(v ->
                 Toast.makeText(HomeActivity.this, "Berada di Halaman Home", Toast.LENGTH_SHORT).show()
         );
 
-        // Klik Transaksi
         btnTransaction.setOnClickListener(v ->
                 Toast.makeText(HomeActivity.this, "Navigasi ke Transaksi", Toast.LENGTH_SHORT).show()
         );
 
-        // Klik Profile
         btnProfile.setOnClickListener(v ->
                 Toast.makeText(HomeActivity.this, "Navigasi ke Profile", Toast.LENGTH_SHORT).show()
         );

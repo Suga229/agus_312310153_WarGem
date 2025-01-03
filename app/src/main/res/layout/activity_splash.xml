@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@android:color/white">
+
 
     <TextView
+        android:id="@+id/logo"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="329dp"
+        android:background="@drawable/rounder"
+        android:text="W"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50dp"></TextView>
+
+    <TextView
+        android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Splash Screen"
-        android:textSize="24sp"
-        android:textColor="@color/black" />
-</LinearLayout>
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="329dp"
+        android:layout_toEndOf="@+id/logo"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textColor="@color/biru"
+        android:textSize="42dp" />
+
+    <TextView
+        android:id="@+id/spesifikasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="warung GEMING"
+        android:textSize="12dp"
+        android:layout_below="@+id/appName"
+        android:layout_toEndOf="@+id/logo"
+        android:layout_marginStart="34dp"
+        android:textColor="@color/biru"
+        ></TextView>
+
+
+</RelativeLayout>
